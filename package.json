@@ -1,0 +1,35 @@
+{
+  "name": "typing-detector",
+  "version": "0.0.0",
+  "description": "Detects when a user is typing",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "gulp test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/jfelsinger/typing-detector.git"
+  },
+  "keywords": [
+    "detector",
+    "typing",
+    "browser",
+    "keyboard"
+  ],
+  "author": "Joel Felsinger <jffelsinger@gmail.com> (http://joelfredrick.com/)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jfelsinger/typing-detector/issues"
+  },
+  "homepage": "https://github.com/jfelsinger/typing-detector",
+  "devDependencies": {
+    "gulp-rename": "^1.2.0",
+    "gulp-mocha": "^2.0.0",
+    "gulp": "^3.8.11",
+    "should": "^5.0.1",
+    "mocha": "^2.1.0",
+    "gulp-uglify": "^1.1.0",
+    "gulp-browserify": "^0.5.1",
+    "gulp-jshint": "^1.9.2"
+  }
+}
