@@ -34,6 +34,14 @@ typingDetector
   .on('typing-stopped', function() {
     console.log('User stopped typing');
   });
+
+// Start detecting typing
+typingDetector.start();
+
+// or
+// Call the detect function manually, 
+typingDetector.detect();
+
 ```
 
 ### Options
