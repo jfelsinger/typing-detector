@@ -10,11 +10,11 @@ deploy:
   email: jffelsinger@gmail.com
   on:
     tags: true
-    repo: jfelsinger/measurement
+    repo: jfelsinger/typing-detector
     all_branches: true
 before_install:
   - npm install -g gulp mocha
   - currentfolder=${PWD##*/}
-  - if [ "$currentfolder" != 'measurement' ]; then cd .. && eval "mv $currentfolder
-    measurement" && cd generator-venm; fi
+  - if [ "$currentfolder" != 'typing-detector' ]; then cd .. && eval "mv $currentfolder
+    typing-detector" && cd generator-venm; fi
 script: gulp test
