@@ -40,3 +40,8 @@ typingDetector
 
 * `selector`: (default:'body') The selector or element html element that you want to detect typing on.
 * `timeout`: (default:5000) The time in milliseconds to wait before deciding that a user has stopped typing.
+
+### Events
+
+* `typing-started`: Fires when a user has started typing
+* `typing-stopped`: Fires when a user has stopped typing
