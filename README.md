@@ -45,3 +45,4 @@ typingDetector
 
 * `typing-started`: Fires when a user has started typing
 * `typing-stopped`: Fires when a user has stopped typing
+* `typing-detected`: Fires each time a user's typing is detected

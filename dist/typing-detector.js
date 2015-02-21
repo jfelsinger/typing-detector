@@ -41,6 +41,7 @@ function Detector(name, timeout) {
 
 extend(Detector, Emitter);
 
+
 /**
  * Indicates that an action has been or is being performed. Ran on each
  * instance of an action.
@@ -124,7 +125,7 @@ module.exports = Emitter;
 
     'use strict';
 
-    root.typingDetector = factory;
+    root.TypingDetector = factory();
 
 }(window, function() {
 
@@ -181,12 +182,12 @@ Object.defineProperty(TypeDetector.prototype, 'isTyping', {
 TypeDetector.prototype.start = 
 TypeDetector.prototype.startDetecting = 
 function() {
-    if (Array.isArray(this.el))
-        for (var i in this.el)
-            this.el[i].addEventListener('keydown', this.detect);
+    if (this.el.length)
+        for (var i = 0; i < this.el.length; i++)
+            this.el[i].addEventListener('keydown', this.detect.bind(this));
 
     else
-        this.el.addEventListener('keydown', this.detect);
+        this.el.addEventListener('keydown', this.detect.bind(this));
 
     return this;
 };
@@ -198,12 +199,12 @@ function() {
 TypeDetector.prototype.stop = 
 TypeDetector.prototype.stopDetecting = 
 function() {
-    if (Array.isArray(this.el))
-        for (var i in this.el)
-            this.el[i].removeEventListener('keydown', this.detect);
+    if (this.el.length)
+        for (var i = 0; i < this.el.length; i++)
+            this.el[i].removeEventListener('keydown', this.detect.bind(this));
 
     else
-        this.el.removeEventListener('keydown', this.detect);
+        this.el.removeEventListener('keydown', this.detect.bind(this));
 
     return this;
 };

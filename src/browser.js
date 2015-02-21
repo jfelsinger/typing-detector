@@ -4,7 +4,7 @@
 
     'use strict';
 
-    root.typingDetector = factory;
+    root.TypingDetector = factory();
 
 }(window, function() {
 

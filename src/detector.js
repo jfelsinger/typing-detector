@@ -20,6 +20,7 @@ function Detector(name, timeout) {
 
 extend(Detector, Emitter);
 
+
 /**
  * Indicates that an action has been or is being performed. Ran on each
  * instance of an action.
