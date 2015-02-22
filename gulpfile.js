@@ -7,6 +7,12 @@ var gulp = require('gulp'),
     browserify = require('gulp-browserify'),
     mocha = require('gulp-mocha');
 
+function handleErr(err) {
+    /* jshint validthis:true */
+    console.log(err.toString());
+    this.emit('end');
+}
+
 gulp.task('lint', function() {
     return gulp.src([
             'gulpfile.js',
@@ -30,7 +36,8 @@ gulp.task('post-lint', function() {
 
 gulp.task('test', ['build'], function() {
     return gulp.src('test/**/*.js')
-        .pipe(mocha({ reporter: 'list' }));
+        .pipe(mocha({ reporter: 'list' }))
+        .on('error', handleErr);
 });
 
 gulp.task('build', ['lint'], function() {
