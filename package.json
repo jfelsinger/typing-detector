@@ -1,6 +1,6 @@
 {
   "name": "typing-detector",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "Detects when a user is typing",
   "main": "src/typing-detector.js",
   "scripts": {

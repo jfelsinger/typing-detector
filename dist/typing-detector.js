@@ -172,7 +172,7 @@ function TypeDetector(options) {
     // Default selector to the body element
     options.selector = options.selector || 'body';
 
-    Detector.call(this, 'typing', options.timeout);
+    Detector.call(this, 'typing', options.timeout, options.wait);
 
     // If the selector is a string assume that it is indeed a selector
     if (typeof options.selector === 'string')

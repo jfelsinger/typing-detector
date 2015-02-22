@@ -46,11 +46,27 @@ typingDetector.detect();
 
 ### Options
 
-* `selector`: (default:'body') The selector or element html element that you want to detect typing on.
-* `timeout`: (default:5000) The time in milliseconds to wait before deciding that a user has stopped typing.
+* `selector`: (default:'body') The selector or element html element that you
+              want to detect typing on.
+* `timeout`: (default:5000) The time in milliseconds to wait before deciding that
+             a user has stopped typing.
+* `wait`: (default:0) An ammount of keystrokes to wait for before deciding if a
+          user is typing.
 
 ### Events
 
 * `typing-started`: Fires when a user has started typing
 * `typing-stopped`: Fires when a user has stopped typing
 * `typing-detected`: Fires each time a user's typing is detected
+* `count-reset`: Fires when the wait count is reset
+
+### Methods
+
+`.on(eventName, cb)` : Subscribe to an event.
+
+`.start()` : start detecting typing on the targeted element(s).
+
+`.stop()` : stop detecting typing.
+
+`.detect()` : Manually detect an instance of typing, this can possibly be useful
+ for integrating with mv* frameworks that have their own event handling.
